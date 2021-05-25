@@ -1,0 +1,251 @@
+$iconFont: "icons" !important;
+
+/*	TYPOGRAPHY
+	========== */
+
+$sans-serif: "Source Sans Variable", sans-serif;
+/* typekit $sans-serif: source-sans-pro, sans-serif; */
+$serif: freight-big-pro, serif;
+$fontWeightLight: 340;
+$fontWeightRegular: 400;
+$fontWeightMedium: 600;
+$fontWeightBold: 600;
+
+/*	LAYOUT
+	====== */
+
+/* Site breakpoints */
+
+$tiny: 37.25em; /* 400px divided by 16px */
+$small: 56.25em; /* 600px divided by 16px */
+$medium: 56.25em; /* 800px divided by 16px */
+$large: 62.5em; /* 1000px divided by 16px */
+$xlarge: 143.75em;
+
+/* COLOR
+	====== */
+
+$burgundy-1: #951829;
+$burgundy-2: #641A2B;
+$burgundy-bright: #ED1C24;
+$gray-border: #c1c1c1;
+$gray-light: #f0eeeb;
+$gray-basic: #63666A;
+$gray-dark: #444;
+
+$linkColor: #951829;
+$linkColorHoverFocus: #d7cfcc;
+$linkColorVisited: #63666A;
+$linkColorActive: #ED1C24;
+$linkBorderColor: #951829;
+
+/* News  */
+
+$u-ArticleListItem__title--font: $fontWeightRegular 1.33em $serif;
+$u-ArticleListItem__title--linkColor: $linkColor;
+$u-ArticleListItem__title--linkColorHoverFocus: $linkColorHoverFocus;
+$u-ArticleListItem__title--linkColorActive: $linkColorActive;
+$u-ArticleListItem__title--linkColorVisited: $linkColorVisited;
+$u-ArticleListItem__summary--font: $fontWeightRegular inherit $sans-serif;
+$u-ArticleListItem__label--type--font: $fontWeightLight .9em $sans-serif;
+$u-ArticleListItem__label--dateline__posted--font: $fontWeightLight .9em $sans-serif;
+$u-ArticleListItem__label--dateline__postedDate--font: $fontWeightLight .9em $sans-serif;
+$u-ArticleListItem__link--linkColor: $gray-dark;
+$u-ArticleListItem__link--linkColorHoverFocus: $linkColorHoverFocus;
+$u-ArticleListItem__link--linkColorActive: $linkColorActive;
+$u-ArticleListItem__link--linkColorVisited: $linkColorVisited;
+$u-ArticleListItem__summary--color: $gray-dark;
+$u-ArticleListItem__summary--colorHoverFocus: $linkColorHoverFocus;
+$u-ArticleListItem__summary--colorActive: $linkColorActive;
+$u-ArticleListItem__summary--colorVisited: $gray-dark;
+$buttonBgColor: #ccc;
+$buttonBgColorHoverFocus: #999;
+$buttonBgColorVisited: #ccc;
+$buttonBgColorActive: #666;
+$buttonLinkColor: #333;
+$buttonLinkColorHoverFocus: #fff;
+$buttonLinkColorVisited: #333;
+$buttonLinkColorActive: #ccc;
+$uniqueButtonBgColor: #666;
+$uniqueButtonBgColorHoverFocus: #999;
+$uniqueButtonBgColorVisited: #666;
+$uniqueButtonBgColorActive: #333;
+$uniqueButtonLinkColor: #fff;
+$uniqueButtonLinkColorHoverFocus: #666;
+$uniqueButtonLinkColorVisited: #fff;
+$uniqueButtonLinkColorActive: #ccc;
+$u-ArticleList__systemMessage--font: $fontWeightRegular 1.1em/1.2 $serif;
+$u-ArticleList__systemMessage--color: #400;
+
+body {
+    /* overflow-x: hidden !important; */
+}
+.u-lMain:not(.PageNav) {
+  line-height: 100% !important;
+  font-size: 100% !important;
+}
+.u-lContent {
+    font-size: 100%;
+}
+.Row {
+    p {
+        font-size: 1.2em;
+        line-height: 1.4;
+    }
+    ul, ol {
+        font-size: 1.1em;
+    }
+}
+
+.u-lContent .Dark a:focus,
+.u-lContent .Dark a:hover,
+.u-lContent .Dark a:visited:focus,
+.u-lContent .Dark a:visited:hover,
+.u-lContent .Dark--scrim a:focus,
+.u-lContent .Dark--scrim a:hover,
+.u-lContent .Dark--scrim a:visited:focus,
+.u-lContent .Dark--scrim a:visited:hover,
+.u-lContent .Dark--bgScrim a:focus,
+.u-lContent .Dark--bgScrim a:hover,
+.u-lContent .Dark--bgScrim a:visited:focus,
+.u-lContent .Dark--bgScrim a:visited:hover {
+	color:$gray-dark !important;
+	text-decoration-color:$gray-dark !important;
+	background-color:$gray-light !important;
+}
+.u-lContent .Dark a:visited,
+.u-lContent .Dark--scrim a:visited,
+.u-lContent .Dark--bgScrim a:visited {
+	color:$gray-border !important;
+	text-decoration-color:$gray-border !important;
+}
+.title-gradient {
+    color: $burgundy-2;
+    text-transform: none;
+    background: linear-gradient(135deg, $burgundy-2 0%, $burgundy-bright 70%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.u-Masthead__head {
+    font-family: $serif;
+    font-weight: $fontWeightRegular;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 2.75rem;
+}
+.u-pageInner.u-thirdLevel {
+    .u-Masthead__head {
+        font-size: .75em;
+        text-transform: uppercase;
+        font-weight: $fontWeightLight !important;
+    }
+}
+.PageNavContainer .Row {
+    background: #fff;
+    box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.2);
+}
+.PageNav {
+    border: none;
+    margin: 0 auto 2em;
+    .Module__title {
+        font-size: 1em
+    }
+    .Module__link {
+        padding: .4em 0;
+    }
+}
+@media screen {
+    .PageNavContainer {
+        position: relative;
+        z-index: 0;
+    }
+}
+@media screen and (min-width: $tiny) {
+    .PageNavContainer {
+        position: sticky;
+        z-index: 1;
+    }
+    .u-lHeader {
+        margin-bottom: 2em;
+    }
+    .u-Masthead__head {
+        font-size: 5rem;
+    }
+    .u-thirdLevel .u-lHeader {
+        margin-bottom: 0;
+    }
+}
+.u-Masthead__siteName--link {
+    padding-bottom: .5em;
+}
+.Row [id] {
+   margin-top: -2em;
+   padding-top: 2em !important;
+}
+.u-lContent {
+    a {
+        &:focus,
+        &:hover,
+        &:visited:focus,
+        &:visited:hover {
+            background-color:#D0D0CE;
+            color:#63666A
+        }
+    }
+}
+main.u-lMain .u-lContent {
+    font-weight: $fontWeightLight;
+}
+.NavInline--3col li {
+    line-height: 1.2;
+}
+.RowContainer:not(.bg)+.RowContainer.bg {
+    margin-top: 2em;
+}
+.RowContainer.bg+.RowContainer:not(.bg) {
+    padding-top: 2em;
+}
+.RowContainer.bg .Row__title {
+    padding-top: 0;
+}
+.Row__title,
+.u-pageTitle {
+    font-size: 2.5em !important;
+    border: none;
+    padding: .75em 0 .15em;
+    font-family: $serif !important;
+    font-weight: $fontWeightBold !important;
+    @extend .title-gradient;
+    text-decoration:none !important;
+    text-transform: none !important;
+    text-align: left!important;
+    display: inline-block;
+}
+.Dark--scrim {
+   .Row__title {
+      color: #fff;
+    }
+}
+.bgSparkPatternMaroonWhite {
+    border: 1px solid $gray-light;
+    background-image: url(../../assets/images/Vassar_SparkPattern_maroon-white.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.bgQuadGrid-grey {
+    background: #d4cfce url(../../assets/images/Vassar_QuadGrid-grey.png) repeat;
+    background-size: 9em;
+    border: 1px solid $gray-light;
+}
+h3.u-ExtendedFooter__listHeader {
+    color: #fff;
+    margin-top: 0;
+    font: normal 600 1.5em/1.1 freight-big-pro,serif;
+    letter-spacing: normal;
+    text-transform: none;
+}
+.u-VCard--site .org {
+    font: $fontWeightBold 2em/1.1 $serif;
+    text-transform: capitalize;
+    letter-spacing: 0;
+}
